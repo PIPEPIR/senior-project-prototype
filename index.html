@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Machine Learning Results Visualization</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+        <h2>Dengue Fever Cases Prediction</h2>
+    </header>
+    <main>
+      <section>
+        <h1>Predicted Case:<span id="predictedCase"> 0 people</span></h1>
+        <p>Mean Absolute Value(MAE): <span>930.48</span></p>
+        <p>Root Mean Square Error(RMSE): <span>1137.76</span></p>
+      </section>
+      <section id="graphSection">
+        <canvas id="resultsGraph"></canvas>
+      </section>
+      <section id="inputSection">
+        <div class="input-value">
+          <label for="rainfall">Estimated amount of rain fall:</label>
+          <input type="number" id="rainfall" name="rainfall" />
+        </div>
+        <div class="input-value">
+          <label for="temperature">Estimated average temperature:</label>
+          <input type="number" id="temperature" name="temperature" />
+        </div>
+        <div>
+          <button id="predictBtn">Predict</button>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
